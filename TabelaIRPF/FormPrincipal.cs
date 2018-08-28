@@ -32,7 +32,7 @@ namespace TabelaIRPF
             tabelaNova.AdicionarFaixa(3000.00m, 0.000m);
             tabelaNova.AdicionarFaixa(4000.00m, 0.150m);
             tabelaNova.AdicionarFaixa(5000.00m, 0.250m);
-            tabelaNova.AdicionarFaixa(7000.00m, 0.300m);
+            tabelaNova.AdicionarFaixa(8000.00m, 0.300m);
             tabelaNova.AdicionarFaixa(null, 0.350m);
 
             listBox1.Items.Clear();
