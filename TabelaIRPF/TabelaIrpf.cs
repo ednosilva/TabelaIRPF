@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace TabelaIRPF
 {
-    public class Tabela
+    public class TabelaIrpf
     {
-        private IList<Faixa> faixas;
+        private IList<FaixaIrpf> faixas;
 
-        public Tabela()
+        public TabelaIrpf()
         {
-            faixas = new List<Faixa>();
+            faixas = new List<FaixaIrpf>();
         }
 
         public decimal ObterImposto(decimal salarioTributavel)
@@ -24,7 +24,7 @@ namespace TabelaIRPF
 
         internal void AdicionarFaixa(decimal? fim, decimal aliquota)
         {
-            this.faixas.Add(new Faixa(fim, aliquota, this.faixas.LastOrDefault()));
+            this.faixas.Add(new FaixaIrpf(fim, aliquota, this.faixas.LastOrDefault()));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TabelaIRPF
 {
-    public class Faixa
+    public class FaixaInss
     {
         public decimal Incio { get; private set; }
 
@@ -14,9 +14,7 @@ namespace TabelaIRPF
 
         public decimal Aliquota { get; private set; }
 
-        public decimal ParcelaDeduzir { get; private set; }
-
-        public Faixa(decimal? fim, decimal aliquota, Faixa faixaAnterior)
+        public FaixaInss(decimal? fim, decimal aliquota, FaixaInss faixaAnterior)
         {
             if (faixaAnterior != null)
             {
@@ -35,13 +33,11 @@ namespace TabelaIRPF
             this.Incio = faixaAnterior == null ? 0m : faixaAnterior.Fim.Value + 0.01m;
             this.Fim = fim;
             this.Aliquota = aliquota;
-            this.ParcelaDeduzir = faixaAnterior == null ? 0.00m : faixaAnterior.ParcelaDeduzir +
-                Math.Round(faixaAnterior.Fim.Value * (aliquota - faixaAnterior.Aliquota), 2);
         }
 
-        internal decimal ObterImposto(decimal salarioTributavel)
+        internal decimal ObterContribuicao(decimal salario)
         {
-            return Math.Round(salarioTributavel * this.Aliquota - this.ParcelaDeduzir, 2);
+            return Math.Round(salario * this.Aliquota, 2);
         }
 
         public bool Contem(decimal valor)

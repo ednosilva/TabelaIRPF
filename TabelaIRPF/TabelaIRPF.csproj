@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tabela.cs" />
-    <Compile Include="Faixa.cs" />
+    <Compile Include="FaixaInss.cs" />
+    <Compile Include="TabelaInss.cs" />
+    <Compile Include="TabelaIrpf.cs" />
+    <Compile Include="FaixaIrpf.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,36 +19,45 @@ namespace TabelaIRPF
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var tabelaAtual = new Tabela();
+            var tabelaInss = new TabelaInss();
+            tabelaInss.AdicionarFaixa(1693.72m, 0.08m);
+            tabelaInss.AdicionarFaixa(2822.90m, 0.09m);
+            tabelaInss.AdicionarFaixa(5645.80m, 0.11m);
 
-            tabelaAtual.AdicionarFaixa(1903.98m, 0m);
-            tabelaAtual.AdicionarFaixa(2826.65m, 0.075m);
-            tabelaAtual.AdicionarFaixa(3751.05m, 0.150m);
-            tabelaAtual.AdicionarFaixa(4664.68m, 0.225m);
-            tabelaAtual.AdicionarFaixa(null, 0.275m);
+            var tabelaIrpfAtual = new TabelaIrpf();
 
-            var tabelaNova = new Tabela();
+            tabelaIrpfAtual.AdicionarFaixa(1903.98m, 0m);
+            tabelaIrpfAtual.AdicionarFaixa(2826.65m, 0.075m);
+            tabelaIrpfAtual.AdicionarFaixa(3751.05m, 0.150m);
+            tabelaIrpfAtual.AdicionarFaixa(4664.68m, 0.225m);
+            tabelaIrpfAtual.AdicionarFaixa(null, 0.275m);
 
-            tabelaNova.AdicionarFaixa(3000.00m, 0.000m);
-            tabelaNova.AdicionarFaixa(4000.00m, 0.150m);
-            tabelaNova.AdicionarFaixa(5000.00m, 0.250m);
-            tabelaNova.AdicionarFaixa(7000.00m, 0.300m);
-            tabelaNova.AdicionarFaixa(null, 0.350m);
+            var tabelaIrpfNova = new TabelaIrpf();
+
+            tabelaIrpfNova.AdicionarFaixa(3000.00m, 0.000m);
+            tabelaIrpfNova.AdicionarFaixa(4000.00m, 0.150m);
+            tabelaIrpfNova.AdicionarFaixa(5000.00m, 0.250m);
+            tabelaIrpfNova.AdicionarFaixa(null, 0.300m);
 
             listBox1.Items.Clear();
 
             var salarios = new List<decimal>
             {
-                2000m, 2500m, 3000m, 3500m, 4000m, 4500m, 5000m, 5500m, 6000m, 6500m, 7000m, 7500m, 8000m, 9000m,
-                10000m, 12000m, 14000m, 16000m, 18000m, 20000m, 25000m, 30000m, 35000m
+                2000m, 2500m, 3000m, 3500m, 4000m, 4500m, 5000m, 5500m, 6000m, 6500m, 7000m, 7500m, 8000m, 8500m, 9000m,
+                9500m, 10000m, 11000m, 12000m, 13000m, 14000m, 15000m, 16000m, 18000m, 20000m, 25000m, 30000m, 35000m
             };
 
-            foreach (var salarioTributavel in salarios)
+            foreach (var salario in salarios)
             {
-                var impostoAtual = tabelaAtual.ObterImposto(salarioTributavel);
-                var impostoNovo = tabelaNova.ObterImposto(salarioTributavel);
+                var contribuicaoInss = tabelaInss.ObterContribuicao(salario);
 
-                listBox1.Items.Add($"Salário Tributável: {salarioTributavel}. " +
+                var salarioTributavel = salario - contribuicaoInss;
+
+                var impostoAtual = tabelaIrpfAtual.ObterImposto(salarioTributavel);
+                var impostoNovo = tabelaIrpfNova.ObterImposto(salarioTributavel);
+
+                listBox1.Items.Add($"Salário: {salario}. " +
+                    $"Salário Tributável: {salarioTributavel}. " +
                     $"IRPF Atual: {impostoAtual}. " +
                     $"IRPF Novo: {impostoNovo}. " +
                     $"Diferença:{impostoNovo - impostoAtual}.");
