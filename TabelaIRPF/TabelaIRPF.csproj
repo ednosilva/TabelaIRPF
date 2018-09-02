@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tributacao.cs" />
     <Compile Include="FaixaInss.cs" />
     <Compile Include="TabelaInss.cs" />
     <Compile Include="TabelaIrpf.cs" />
