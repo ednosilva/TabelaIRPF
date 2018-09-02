@@ -12,6 +12,8 @@ namespace TabelaIRPF
 {
     public partial class FormPrincipal : Form
     {
+        private IList<Tuple<MaskedTextBox, MaskedTextBox>> textosFaixas;
+
         private TabelaInss tabelaInssAtual;
 
         private TabelaIrpf tabelaIrpfAtual;
@@ -24,8 +26,21 @@ namespace TabelaIRPF
         {
             InitializeComponent();
 
+            CriarListaComponentesFaixas();
             CriarTabelaInssAtual();
             CriarTabelaIrpfAtual();
+        }
+
+        private void CriarListaComponentesFaixas()
+        {
+            textosFaixas = new List<Tuple<MaskedTextBox, MaskedTextBox>>
+            {
+                new Tuple<MaskedTextBox, MaskedTextBox>(textoFimFaixa1, textoAliquotaFaixa1),
+                new Tuple<MaskedTextBox, MaskedTextBox>(textoFimFaixa2, textoAliquotaFaixa2),
+                new Tuple<MaskedTextBox, MaskedTextBox>(textoFimFaixa3, textoAliquotaFaixa3),
+                new Tuple<MaskedTextBox, MaskedTextBox>(textoFimFaixa4, textoAliquotaFaixa4),
+                new Tuple<MaskedTextBox, MaskedTextBox>(textoFimFaixa5, textoAliquotaFaixa5),
+            };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,8 +67,8 @@ namespace TabelaIRPF
             var salarios = new List<decimal>
             {
                 2000.00m, 2500.00m, 3000.00m, 3500.00m, 4000.00m, 4500.00m, 5000.00m, 5500.00m, 6000.00m, 6500.00m,
-                7000.00m, 7500.00m, 8000.00m, 8500.00m, 9000.00m, 9500.00m, 10000.00m, 11000.00m, 12000.00m, 13000.00m,
-                14000.00m, 15000.00m, 16000.00m, 18000.00m, 20000.00m, 25000.00m, 30000.00m, 35000.00m
+                7000.00m, 7500.00m, 8000.00m, 9000.00m, 10000.00m, 11000.00m, 12000.00m, 13000.00m, 14000.00m,
+                15000.00m, 17000.00m, 20000.00m, 25000.00m, 30000.00m, 35000.00m
             };
 
             tributacoes = new List<Tributacao>();
@@ -98,21 +113,17 @@ namespace TabelaIRPF
         private void CriarTabelaIrpfNova()
         {
             tabelaIrpfNova = new TabelaIrpf();
-            tabelaIrpfNova.AdicionarFaixa(decimal.Parse(textoFimFaixa1.Text), decimal.Parse(textoAliquotaFaixa1.Text));
-            tabelaIrpfNova.AdicionarFaixa(decimal.Parse(textoFimFaixa2.Text), decimal.Parse(textoAliquotaFaixa2.Text));
-            tabelaIrpfNova.AdicionarFaixa(decimal.Parse(textoFimFaixa3.Text), decimal.Parse(textoAliquotaFaixa3.Text));
 
-            if (string.IsNullOrEmpty(textoFimFaixa4.Text))
-                tabelaIrpfNova.AdicionarFaixa(null, decimal.Parse(textoAliquotaFaixa4.Text));
-            else
-                tabelaIrpfNova.AdicionarFaixa(decimal.Parse(textoFimFaixa4.Text), decimal.Parse(textoAliquotaFaixa4.Text));
-
-            if (!string.IsNullOrEmpty(textoFimFaixa4.Text))
+            foreach (var textos in textosFaixas)
             {
-                if (string.IsNullOrEmpty(textoFimFaixa5.Text))
-                    tabelaIrpfNova.AdicionarFaixa(null, decimal.Parse(textoAliquotaFaixa5.Text));
-                else
-                    tabelaIrpfNova.AdicionarFaixa(decimal.Parse(textoFimFaixa5.Text), decimal.Parse(textoAliquotaFaixa5.Text));
+                decimal aliquota;
+                if (!decimal.TryParse(textos.Item2.Text, out aliquota))
+                    break;
+
+                decimal? fimFaixa = string.IsNullOrEmpty(textos.Item1.Text) ?
+                    (decimal?)null : decimal.Parse(textos.Item1.Text);
+
+                tabelaIrpfNova.AdicionarFaixa(fimFaixa, aliquota);
             }
         }
 

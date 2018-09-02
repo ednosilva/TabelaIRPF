@@ -74,7 +74,7 @@
             this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid.CausesValidation = false;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(183, 12);
+            this.grid.Location = new System.Drawing.Point(133, 12);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersVisible = false;
@@ -82,14 +82,14 @@
             this.grid.ShowCellErrors = false;
             this.grid.ShowEditingIcon = false;
             this.grid.ShowRowErrors = false;
-            this.grid.Size = new System.Drawing.Size(839, 639);
+            this.grid.Size = new System.Drawing.Size(779, 573);
             this.grid.TabIndex = 1;
             // 
             // textoFimFaixa1
             // 
             this.textoFimFaixa1.Location = new System.Drawing.Point(6, 37);
             this.textoFimFaixa1.Name = "textoFimFaixa1";
-            this.textoFimFaixa1.Size = new System.Drawing.Size(102, 20);
+            this.textoFimFaixa1.Size = new System.Drawing.Size(48, 20);
             this.textoFimFaixa1.TabIndex = 2;
             this.textoFimFaixa1.Text = "3000";
             // 
@@ -110,24 +110,24 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 64);
+            this.groupBox1.Size = new System.Drawing.Size(115, 64);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Faixa 1";
             // 
             // textoAliquotaFaixa1
             // 
-            this.textoAliquotaFaixa1.Location = new System.Drawing.Point(114, 37);
+            this.textoAliquotaFaixa1.Location = new System.Drawing.Point(60, 37);
             this.textoAliquotaFaixa1.Mask = "0.000";
             this.textoAliquotaFaixa1.Name = "textoAliquotaFaixa1";
-            this.textoAliquotaFaixa1.Size = new System.Drawing.Size(44, 20);
+            this.textoAliquotaFaixa1.Size = new System.Drawing.Size(50, 20);
             this.textoAliquotaFaixa1.TabIndex = 4;
             this.textoAliquotaFaixa1.Text = "0000";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 21);
+            this.label2.Location = new System.Drawing.Point(60, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 5;
@@ -141,24 +141,24 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 82);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(165, 64);
+            this.groupBox2.Size = new System.Drawing.Size(115, 64);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Faixa 2";
             // 
             // textoAliquotaFaixa2
             // 
-            this.textoAliquotaFaixa2.Location = new System.Drawing.Point(114, 37);
+            this.textoAliquotaFaixa2.Location = new System.Drawing.Point(60, 37);
             this.textoAliquotaFaixa2.Mask = "0.000";
             this.textoAliquotaFaixa2.Name = "textoAliquotaFaixa2";
-            this.textoAliquotaFaixa2.Size = new System.Drawing.Size(44, 20);
+            this.textoAliquotaFaixa2.Size = new System.Drawing.Size(50, 20);
             this.textoAliquotaFaixa2.TabIndex = 4;
             this.textoAliquotaFaixa2.Text = "0150";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 21);
+            this.label3.Location = new System.Drawing.Point(60, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
@@ -168,7 +168,7 @@
             // 
             this.textoFimFaixa2.Location = new System.Drawing.Point(6, 37);
             this.textoFimFaixa2.Name = "textoFimFaixa2";
-            this.textoFimFaixa2.Size = new System.Drawing.Size(102, 20);
+            this.textoFimFaixa2.Size = new System.Drawing.Size(48, 20);
             this.textoFimFaixa2.TabIndex = 2;
             this.textoFimFaixa2.Text = "4000";
             // 
@@ -189,24 +189,24 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(12, 152);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(165, 64);
+            this.groupBox3.Size = new System.Drawing.Size(115, 64);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Faixa 3";
             // 
             // textoAliquotaFaixa3
             // 
-            this.textoAliquotaFaixa3.Location = new System.Drawing.Point(114, 37);
+            this.textoAliquotaFaixa3.Location = new System.Drawing.Point(60, 37);
             this.textoAliquotaFaixa3.Mask = "0.000";
             this.textoAliquotaFaixa3.Name = "textoAliquotaFaixa3";
-            this.textoAliquotaFaixa3.Size = new System.Drawing.Size(44, 20);
+            this.textoAliquotaFaixa3.Size = new System.Drawing.Size(50, 20);
             this.textoAliquotaFaixa3.TabIndex = 4;
             this.textoAliquotaFaixa3.Text = "0250";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 21);
+            this.label5.Location = new System.Drawing.Point(60, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 5;
@@ -216,7 +216,7 @@
             // 
             this.textoFimFaixa3.Location = new System.Drawing.Point(6, 37);
             this.textoFimFaixa3.Name = "textoFimFaixa3";
-            this.textoFimFaixa3.Size = new System.Drawing.Size(102, 20);
+            this.textoFimFaixa3.Size = new System.Drawing.Size(48, 20);
             this.textoFimFaixa3.TabIndex = 2;
             this.textoFimFaixa3.Text = "5000";
             // 
@@ -237,24 +237,24 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(12, 222);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(165, 64);
+            this.groupBox4.Size = new System.Drawing.Size(115, 64);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Faixa 4";
             // 
             // textoAliquotaFaixa4
             // 
-            this.textoAliquotaFaixa4.Location = new System.Drawing.Point(114, 37);
+            this.textoAliquotaFaixa4.Location = new System.Drawing.Point(60, 37);
             this.textoAliquotaFaixa4.Mask = "0.000";
             this.textoAliquotaFaixa4.Name = "textoAliquotaFaixa4";
-            this.textoAliquotaFaixa4.Size = new System.Drawing.Size(44, 20);
+            this.textoAliquotaFaixa4.Size = new System.Drawing.Size(50, 20);
             this.textoAliquotaFaixa4.TabIndex = 4;
             this.textoAliquotaFaixa4.Text = "0300";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 21);
+            this.label7.Location = new System.Drawing.Point(60, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 5;
@@ -264,7 +264,7 @@
             // 
             this.textoFimFaixa4.Location = new System.Drawing.Point(6, 37);
             this.textoFimFaixa4.Name = "textoFimFaixa4";
-            this.textoFimFaixa4.Size = new System.Drawing.Size(102, 20);
+            this.textoFimFaixa4.Size = new System.Drawing.Size(48, 20);
             this.textoFimFaixa4.TabIndex = 2;
             this.textoFimFaixa4.Text = "10000";
             // 
@@ -285,24 +285,24 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Location = new System.Drawing.Point(12, 292);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(165, 64);
+            this.groupBox5.Size = new System.Drawing.Size(115, 64);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Faixa 5";
             // 
             // textoAliquotaFaixa5
             // 
-            this.textoAliquotaFaixa5.Location = new System.Drawing.Point(114, 37);
+            this.textoAliquotaFaixa5.Location = new System.Drawing.Point(60, 37);
             this.textoAliquotaFaixa5.Mask = "0.000";
             this.textoAliquotaFaixa5.Name = "textoAliquotaFaixa5";
-            this.textoAliquotaFaixa5.Size = new System.Drawing.Size(44, 20);
+            this.textoAliquotaFaixa5.Size = new System.Drawing.Size(50, 20);
             this.textoAliquotaFaixa5.TabIndex = 4;
             this.textoAliquotaFaixa5.Text = "0350";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(111, 21);
+            this.label9.Location = new System.Drawing.Point(60, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 5;
@@ -312,7 +312,7 @@
             // 
             this.textoFimFaixa5.Location = new System.Drawing.Point(6, 37);
             this.textoFimFaixa5.Name = "textoFimFaixa5";
-            this.textoFimFaixa5.Size = new System.Drawing.Size(102, 20);
+            this.textoFimFaixa5.Size = new System.Drawing.Size(48, 20);
             this.textoFimFaixa5.TabIndex = 2;
             // 
             // label10
@@ -328,7 +328,7 @@
             // 
             this.botaoCalcular.Location = new System.Drawing.Point(12, 362);
             this.botaoCalcular.Name = "botaoCalcular";
-            this.botaoCalcular.Size = new System.Drawing.Size(165, 30);
+            this.botaoCalcular.Size = new System.Drawing.Size(115, 30);
             this.botaoCalcular.TabIndex = 10;
             this.botaoCalcular.Text = "Calcular";
             this.botaoCalcular.UseVisualStyleBackColor = true;
@@ -339,7 +339,7 @@
             this.AcceptButton = this.botaoCalcular;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 663);
+            this.ClientSize = new System.Drawing.Size(924, 597);
             this.Controls.Add(this.botaoCalcular);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
